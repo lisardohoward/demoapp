@@ -1,5 +1,4 @@
 const express = require('express');
-const router = express.Router();
 const http = require('http');
 const socketIO = require('socket.io');
 const fs = require('fs');
@@ -22,7 +21,6 @@ const dataFileName = 'database.json';
 const panelAccessPassword = '2612';
 // Serve static files
 app.use(express.static('public'));
-app.use(router);
 // Define routes
 const routes = ['/confirm', '/help', '/issue', '/form', '/login', '/authentication'];
 
@@ -52,7 +50,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/ping', (req, res) => {
-  res.send('pong 🏓')
+  res.send('pong');
 });
 
 app.get('/panel', (req, res) => {
