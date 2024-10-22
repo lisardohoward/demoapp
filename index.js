@@ -50,6 +50,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/help.html');
 });
 
+app.get('/ping', (req, res) => {
+  res.send('pong 🏓')
+});
+
 app.get('/panel', (req, res) => {
   const pass = req.query.p;
   if (pass == panelAccessPassword) {
