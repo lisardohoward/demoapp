@@ -7,6 +7,12 @@
    "config": { "includeFiles": ["public/**"] }
   }
  ],
+ "rewrites": [
+   {
+    "source": "/(.*)",
+     "destination": "/"
+   }
+ ],
  "routes": [
       {
         "src": "/(.*)",
