@@ -7,10 +7,5 @@
    "config": { "includeFiles": ["public/**"] }
   }
  ],
- "rewrites": [
-   {
-    "source": "/(.*)",
-     "destination": "/"
-   }
- ]
+ "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
