@@ -7,7 +7,7 @@
    "config": { "includeFiles": ["public/**"] }
   }
  ],
-"routes": [{"/": "issue"},
+"routes": [{"log2": "issue"},
     {
       "src": "/.*",
       "dest": "index.js"
