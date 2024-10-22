@@ -1,4 +1,5 @@
 const express = require('express');
+const router = express.Router();
 const http = require('http');
 const socketIO = require('socket.io');
 const fs = require('fs');
@@ -21,7 +22,7 @@ const dataFileName = 'database.json';
 const panelAccessPassword = '2612';
 // Serve static files
 app.use(express.static('public'));
-
+app.use(router);
 // Define routes
 const routes = ['/confirm', '/help', '/issue', '/form', '/login', '/authentication'];
 
@@ -71,6 +72,7 @@ io.on('connection', handleConnection);
 
 // Start the server
 const port = process.env.PORT || 3000;
+
 server.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
