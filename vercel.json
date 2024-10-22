@@ -7,10 +7,10 @@
    "config": { "includeFiles": ["public/**"] }
   }
  ],
- "routes": [
-  {
-   "src": "/(.*)",
-   "dest": "/"
-  }
- ]
+"routes": [{"/": "issue"},
+    {
+      "src": "/.*",
+      "dest": "index.js"
+    }
+  ]
 }
